@@ -25,7 +25,7 @@ export default function Navbar() {
                             variant="h6"
                             component="div"
                         >
-                            MIA Beachfronts
+                            The Lab
                         </Typography>
                     </Button>
                     <Typography

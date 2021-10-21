@@ -31,7 +31,7 @@ const Home: NextPage = () => {
     >
         <Box
           sx={{
-            position: "absolute",
+            position: "relative",
             top: "50%",
             display: 'flex',
             flexDirection: 'column',

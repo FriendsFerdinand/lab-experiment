@@ -40,6 +40,7 @@ export const currentGuineaContractState = atom((get) => {
       : network.getCoreApiUrl() === DEFAULT_TESTNET_SERVER
       ? DEFAULT_TESTNET_GUINEA_CONTRACT
       : DEFAULT_MAINNET_GUINEA_CONTRACT;
+  console.log(guineaContract);
   return guineaContract;
 });
 

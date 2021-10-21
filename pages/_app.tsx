@@ -8,11 +8,12 @@ import { Provider } from 'jotai';
 const authOptions = {
   appDetails: {
     name: 'Guinea Pigs',
-    icon: '/some-logo.png'
+    icon: 'https://ipfs.io/ipfs/QmQtXhwPeqG2TKs6BifRM7yxHqgG4FykH3TPNHLFk6Qq5Q/guinea_0.png'
   }
 }
 
-const network = 'testnet';
+// const network = 'testnet';
+const network = 'mainnet';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

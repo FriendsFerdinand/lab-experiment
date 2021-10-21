@@ -13,6 +13,7 @@ import {
   createAssetInfo,
   createContractPrincipal,
   createNonFungiblePostCondition,
+  createStandardPrincipal,
   createSTXPostCondition,
   FungibleConditionCode,
   NonFungibleConditionCode,
@@ -27,7 +28,6 @@ export function useHandleMint() {
     loadingAtom(LOADING_KEYS.WALLETPOPUP)
   );
   const { handleContractCall } = useTransactionPopup();
-  console.log(address);
 
   const onFinish = useCallback(() => {
     void setIsWalletPopup(false);
@@ -45,16 +45,11 @@ export function useHandleMint() {
       functionName: MINT_FUNCTION,
       functionArgs: [],
       postConditions: [
-        createSTXPostCondition(
-          address as string,
-          FungibleConditionCode.LessEqual,
-          50
-        ),
         createNonFungiblePostCondition(
-          createContractPrincipal(contractAddress, contractName),
+          createStandardPrincipal(address as string),
           NonFungibleConditionCode.Owns,
-          createAssetInfo(contractAddress, contractName, "random-nft"),
-          bufferCVFromString("random-nft")
+          createAssetInfo(contractAddress, contractName, "guinea-piggies"),
+          bufferCVFromString("guinea-piggies")
         ),
       ],
       onFinish,
