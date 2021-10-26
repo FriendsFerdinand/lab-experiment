@@ -1,3 +1,4 @@
+import { GetQueries, withInitialQueries } from 'jotai-query-toolkit/nextjs';
 import React from 'react';
 import Navbar from './navBar';
 
@@ -21,4 +22,6 @@ class Layout extends React.Component<Props> {
     }
 }
 
+
+// export default withInitialQueries(Layout, atomBuilder)(queries);
 export default Layout;
